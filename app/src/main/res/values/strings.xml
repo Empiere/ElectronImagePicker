@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ElectronImagePicker</string>
+    <string name="pick_single_image">Pick Single Image</string>
+    <string name="pick_multiple_images">Pick MultiPle Images</string>
+</resources>
