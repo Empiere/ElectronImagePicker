@@ -3,6 +3,8 @@
 [![](https://jitpack.io/v/Empiere/ElectronImagePicker.svg)](https://jitpack.io/#Empiere/ElectronImagePicker)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+# Demo
+![](https://github.com/Empiere/ElectronImagePicker/blob/main/readme_data/Image_Picker_Banner.gif)
 
 # Setup
 **1. Add this to your project level build.gradle file**
