@@ -36,9 +36,8 @@ dependencies {
     implementation 'com.github.Empiere:ElectronImagePicker:1.0'
 }
 ```
-
-# Documentation
-
+<br></br>
+# How to use?
 > ## Start ElectronImagePickerActivity::class.java from your activity or fragment
 
 ``` kotlin
@@ -72,7 +71,7 @@ val imageLauncher = registerForActivityResult(ActivityResultContracts.StartActiv
 
         }
 ```
-
+<br></br>
 > ## For Single Image Picker
 ``` kotlin
 val intent = Intent(this, ElectronImagePickerActivity::class.java)
@@ -82,10 +81,11 @@ intent.putExtra(MAX_IMAGE_SIZE_IN_BYTE, getBytesFromMB(5f))
 imageLauncher.launch(intent)
 ```
 ``` 
+Output :
 I/MainActivity: RESULT_OK: Message - User selected 1 images.
 I/MainActivity: Data : ElectronImage(id=32, name=cute_dog_604243.jpg, sizeInBytes=2135089, formattedSize=2.14 MB, contentUri=content://media/external/images/media/32, filePath=/storage/emulated/0/Pictures/Picture_3.jpg)
 ```
-
+<br></br>
 > ## For Multiple Image Picker
 ``` kotlin
 val intent = Intent(this, ElectronImagePickerActivity::class.java)
@@ -96,6 +96,7 @@ intent.putExtra(MAX_IMAGE_SIZE_IN_BYTE, getBytesFromMB(5f))
 imageLauncher.launch(intent)
 ```
 ``` 
+Output :
 I/MainActivity: RESULT_OK: Message - User selected 5 images.
 I/MainActivity: Data : ElectronImage(id=76, name=Camera_1.jpg, sizeInBytes=200987, formattedSize=201 kB, contentUri=content://media/external/images/media/76, filePath=/storage/emulated/0/Download/Clicked/Camera_1.jpg)
 I/MainActivity: Data : ElectronImage(id=48, name=Download_1.jpg, sizeInBytes=329551, formattedSize=330 kB, contentUri=content://media/external/images/media/48, filePath=/storage/emulated/0/Pictures/empieretech/Download_1.jpg)
@@ -103,3 +104,5 @@ I/MainActivity: Data : ElectronImage(id=32, name=cute_dog_604243.jpg, sizeInByte
 I/MainActivity: Data : ElectronImage(id=24, name=adorable_animal_breed_canine_cute_dog_doggy_603425.webp, sizeInBytes=45206, formattedSize=45.21 kB, contentUri=content://media/external/images/media/24, filePath=/storage/emulated/0/Pictures/Pic Folder/Pic_2.webp)
 I/MainActivity: Data : ElectronImage(id=20, name=IMG_20220510_115825.jpg, sizeInBytes=144058, formattedSize=144 kB, contentUri=content://media/external/images/media/20, filePath=/storage/emulated/0/DCIM/Camera/Camera_3.jpg)
 ```
+<br></br>
+# Documentation
