@@ -38,6 +38,9 @@ dependencies {
 ```
 <br></br>
 # How to use?
+
+` Make sure app have READ_EXTERNAL_STORAGE permission before starting below activity.`
+
 > ## Start ElectronImagePickerActivity::class.java from your activity or fragment
 
 ``` kotlin
