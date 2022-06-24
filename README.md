@@ -192,3 +192,4 @@ data class ElectronImage(
 
 ```
 
+# Thank you for using our library :pray:
