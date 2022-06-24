@@ -117,8 +117,7 @@ intent.putExtra(SELECTION_TYPE, SelectionType.MULTIPLE)
 ```
 
 > 2. MAX_MULTI_SELECTION_SIZE
-
-> (Only if you passed SelectionType.MULTIPLE in SELECTION_TYPE)
+`(Only if you passed SelectionType.MULTIPLE in SELECTION_TYPE)`
 ``` kotlin
 intent.putExtra(MAX_MULTI_SELECTION_SIZE, MaxMultiSelectionSize.FIVE) 
 /*
@@ -147,5 +146,49 @@ intent.putExtra(MAX_IMAGE_SIZE_IN_BYTE, getBytesFromMB(3f))
 		fun getBytesFromMB(mb: Float): String // Returns bytes in string
    	        fun getBytesFromKB(kb: Float): String // Returns bytes in string
 */
+```
+<br></br>
+## How to get ElectronImagePickerActivity result data?
+
+> 1. MESSAGE
+``` kotlin
+val message = intent.getStringExtra(MESSAGE)
+/*
+	Returns appropriate Success or Error message.
+*/
+```
+
+> 1. ELECTRON_IMAGES_DATA
+``` kotlin
+val imageDataInJson = intent.getStringExtra(ELECTRON_IMAGES_DATA)
+/*
+	Returns list of ElectronImage object in Json format.
+*/
+```
+
+` How to Get list of ElectronImage Object from Json data?`
+``` kotlin
+val listOfElectronImage = getElectronImageListFromData(json) 
+/*
+	Predefined functions from library :
+	getElectronImageListFromData(json: String): List<ElectronImage> 
+	
+	Returns list of ElectronImage object in Json format.
+*/
+```
+<br></br>
+## ElectronImage Data Class
+
+``` kotlin
+
+data class ElectronImage(
+    val id: Long,
+    val name: String,
+    val sizeInBytes: Long,
+    val formattedSize: String,
+    val contentUri: String,
+    val filePath: String
+)
+
 ```
 
