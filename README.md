@@ -106,3 +106,46 @@ I/MainActivity: Data : ElectronImage(id=20, name=IMG_20220510_115825.jpg, sizeIn
 ```
 <br></br>
 # Documentation
+
+## Required Intent data for starting ElectronImagePickerActivity
+
+> 1. SELECTION_TYPE
+``` kotlin
+intent.putExtra(SELECTION_TYPE, SelectionType.SINGLE)
+or
+intent.putExtra(SELECTION_TYPE, SelectionType.MULTIPLE)
+```
+
+> 2. MAX_MULTI_SELECTION_SIZE
+
+> (Only if you passed SelectionType.MULTIPLE in SELECTION_TYPE)
+``` kotlin
+intent.putExtra(MAX_MULTI_SELECTION_SIZE, MaxMultiSelectionSize.FIVE) 
+/*
+	Default value is MaxMultiSelectionSize.TWO
+	Range between [MaxMultiSelectionSize.ONE to MaxMultiSelectionSize.TEN]
+*/
+```
+> 3. MIN_IMAGE_SIZE_IN_BYTE
+``` kotlin
+intent.putExtra(MIN_IMAGE_SIZE_IN_BYTE, getBytesFromMB(0f)) 
+/*
+	Default value is getBytesFromKB(1f)
+	
+	Predefined functions from library :
+		fun getBytesFromMB(mb: Float): String // Returns bytes in string
+   	        fun getBytesFromKB(kb: Float): String // Returns bytes in string
+*/
+```
+> 3. MAX_IMAGE_SIZE_IN_BYTE
+``` kotlin
+intent.putExtra(MAX_IMAGE_SIZE_IN_BYTE, getBytesFromMB(3f)) 
+/*
+	Default value is getBytesFromMB(5f)
+	
+	Predefined functions from library :
+		fun getBytesFromMB(mb: Float): String // Returns bytes in string
+   	        fun getBytesFromKB(kb: Float): String // Returns bytes in string
+*/
+```
+
