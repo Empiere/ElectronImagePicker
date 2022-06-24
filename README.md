@@ -3,10 +3,10 @@
 [![](https://jitpack.io/v/Empiere/ElectronImagePicker.svg)](https://jitpack.io/#Empiere/ElectronImagePicker)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# Demo
+# Demo :fire:
 ![](https://github.com/Empiere/ElectronImagePicker/blob/main/readme_data/Image_Picker_Banner.gif)
 
-# Setup
+# Setup :key:
 **1. Add this to your project level build.gradle file**
 
 ``` kotlin
@@ -37,7 +37,7 @@ dependencies {
 }
 ```
 <br></br>
-# How to use?
+# How to use:question:
 
 ` Make sure app have READ_EXTERNAL_STORAGE permission before starting below activity.`
 
@@ -108,18 +108,18 @@ I/MainActivity: Data : ElectronImage(id=24, name=adorable_animal_breed_canine_cu
 I/MainActivity: Data : ElectronImage(id=20, name=IMG_20220510_115825.jpg, sizeInBytes=144058, formattedSize=144 kB, contentUri=content://media/external/images/media/20, filePath=/storage/emulated/0/DCIM/Camera/Camera_3.jpg)
 ```
 <br></br>
-# Documentation
+# Documentation :page_facing_up:
 
 ## Required Intent data for starting ElectronImagePickerActivity
 
-> 1. SELECTION_TYPE
+> :one: SELECTION_TYPE
 ``` kotlin
 intent.putExtra(SELECTION_TYPE, SelectionType.SINGLE)
 or
 intent.putExtra(SELECTION_TYPE, SelectionType.MULTIPLE)
 ```
 
-> 2. MAX_MULTI_SELECTION_SIZE
+> :two: MAX_MULTI_SELECTION_SIZE
 `(Only if you passed SelectionType.MULTIPLE in SELECTION_TYPE)`
 ``` kotlin
 intent.putExtra(MAX_MULTI_SELECTION_SIZE, MaxMultiSelectionSize.FIVE) 
@@ -128,7 +128,7 @@ intent.putExtra(MAX_MULTI_SELECTION_SIZE, MaxMultiSelectionSize.FIVE)
 	Range between [MaxMultiSelectionSize.ONE to MaxMultiSelectionSize.TEN]
 */
 ```
-> 3. MIN_IMAGE_SIZE_IN_BYTE
+> :three: MIN_IMAGE_SIZE_IN_BYTE
 ``` kotlin
 intent.putExtra(MIN_IMAGE_SIZE_IN_BYTE, getBytesFromMB(0f)) 
 /*
@@ -139,7 +139,7 @@ intent.putExtra(MIN_IMAGE_SIZE_IN_BYTE, getBytesFromMB(0f))
    	        fun getBytesFromKB(kb: Float): String // Returns bytes in string
 */
 ```
-> 3. MAX_IMAGE_SIZE_IN_BYTE
+> :four: MAX_IMAGE_SIZE_IN_BYTE
 ``` kotlin
 intent.putExtra(MAX_IMAGE_SIZE_IN_BYTE, getBytesFromMB(3f)) 
 /*
@@ -151,9 +151,9 @@ intent.putExtra(MAX_IMAGE_SIZE_IN_BYTE, getBytesFromMB(3f))
 */
 ```
 <br></br>
-## How to get ElectronImagePickerActivity result data?
+## How to get ElectronImagePickerActivity result data:question:
 
-> 1. MESSAGE
+> :one: MESSAGE
 ``` kotlin
 val message = intent.getStringExtra(MESSAGE)
 /*
@@ -161,7 +161,7 @@ val message = intent.getStringExtra(MESSAGE)
 */
 ```
 
-> 1. ELECTRON_IMAGES_DATA
+> :two: ELECTRON_IMAGES_DATA
 ``` kotlin
 val imageDataInJson = intent.getStringExtra(ELECTRON_IMAGES_DATA)
 /*
@@ -180,7 +180,7 @@ val listOfElectronImage = getElectronImageListFromData(json)
 */
 ```
 <br></br>
-## ElectronImage Data Class
+## ElectronImage Data Class :wrench:
 
 ``` kotlin
 
