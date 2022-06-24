@@ -1,4 +1,4 @@
-# ElectronImagePicker
+# :fire: Electron Image Picker Library :fire:
 
 [![](https://jitpack.io/v/Empiere/ElectronImagePicker.svg)](https://jitpack.io/#Empiere/ElectronImagePicker)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
